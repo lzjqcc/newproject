@@ -1,0 +1,28 @@
+<!-- hbox layout -->
+<div class="hbox hbox-auto-xs bg-light h-full">
+	<div class="col w-md b-r ">
+		<div class="vbox">
+			<div class="wrapper-md b-b">
+				<div class="font-thin h4">工作流实体</div>
+			</div>
+			<div class="row-row">
+				<div class="cell scrollable">
+					<div class="cell-inner">
+						<div class="wrapper-md">
+							<ul class="nav nav-pills nav-stacked nav-sm">
+								<li ui-sref-active="active"><a
+									ui-sref="entities.entity.page({entity_type:'user',view_type:'acts'})">用户</a>
+								</li>
+								<li ui-sref-active="active"><a
+									ui-sref="entities.entity.page({entity_type:'order',view_type:'acts'})">标的</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col lter" ui-view></div>
+</div>
+<!-- /hbox layout -->

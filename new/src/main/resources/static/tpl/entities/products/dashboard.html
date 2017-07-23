@@ -1,0 +1,117 @@
+<div class="hbox hbox-auto-xs bg-light ">
+
+    <div class="col lter">
+        <div class="vbox">
+            <div class="row-row">
+                <div class="cell scrollable">
+                    <div class="cell-inner">
+                        <div class="wrapper-md">
+                            <form editable-form name="editableForm" onaftersave="saveUser()">
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">产品名称</label>
+                                        <div class="col-sm-3">
+                                            <input class='form-control' type='text' ng-model="product.product_name" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">产品类型</label>
+                                        <div class="col-sm-3">
+                                            <select class='form-control' ng-model="product.product_type" ng-options="key as value for (key , value) in global_configs.product_types"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">还款方式</label>
+                                        <div class="col-sm-3">
+                                            <select class='form-control' ng-model="product.repayment_type" ng-options="key as value for (key , value) in global_configs.repayment_types"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">客户类型</label>
+                                        <div class="col-sm-3">
+                                            <select class='form-control' ng-model="product.customer_type" ng-options="key as value for (key , value) in global_configs.customer_types"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">最小放款金额</label>
+                                        <div class="col-sm-3">
+                                            <input class='form-control' type='text' ng-model="product.amount_start" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">最大放款金额</label>
+                                        <div class="col-sm-3">
+                                            <input class='form-control' type='text' ng-model="product.amount_end" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">时间单位</label>
+                                        <div class="col-sm-3">
+                                            <select class='form-control'ng-model="product.time_unit" ng-options="key as value for (key , value) in global_configs.time_units"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">分期数量</label>
+                                        <div class="col-sm-3">
+                                            <input type='text' class='form-control' ng-model="product.rate_rule" placeholder='小逗号隔开，则是按分期序列，例如：1,3,6,12,24' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">利率规则</label>
+                                        <div class="col-sm-3">
+                                            <input type='text' class='form-control' ng-model="product.rate_rule" placeholder='小逗号隔开，则是按分期序列的利率组，例如：1.1,1.2' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">外部说明</label>
+                                        <div class="col-sm-3">
+                                            <textarea  class='form-control' ng-model="product.introduction" placeholder='外部说明' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">内部备注</label>
+                                        <div class="col-sm-3">
+                                            <textarea  class='form-control' ng-model="product.description" placeholder='内部备注' />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">借方还款时间</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" >
+                                                <option value="自然月第一天">自然月第一天</option>
+                                                <option value="自然月最后一天">自然月最后一天</option>
+                                                <option value="">标的创建时间</option>
+                                                <option value="">垫资日</option>
+                                                <option value="">银行放款日</option>
+                                                <option value="">自定义</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                   <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label">贷方还款时间</label>
+                                        <div class="col-sm-3">
+                                            <select class="form-control" >
+                                                <option value="自然月第一天">自然月第一天</option>
+                                                <option value="自然月最后一天">自然月最后一天</option>
+                                                <option value="">标的创建时间</option>
+                                                <option value="">垫资日</option>
+                                                <option value="">银行放款日</option>
+                                                <option value="">自定义</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-3 control-label sr-only"></label>
+                                        <div class="col-sm-3">
+                                            <button type="button" class="btn btn-success">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

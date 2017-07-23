@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<script
+	src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+</head>
+<body>
+<div id="login_container"></div>
+	<script th:inline="javascript">
+
+    var obj = new WxLogin({
+        id:"login_container", 
+        appid: [[${appid}]], 
+        scope: [[${scope}]], 
+        redirect_uri: [[${redirect_uri}]],
+        state: [[${state}]],
+        style: "",
+        href: ""
+      });
+    
+   </script>
+</body>
+</html>
